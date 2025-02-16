@@ -226,7 +226,7 @@ const questions = [
     };
   
     // Send the embed via the Discord webhook.
-    fetch(process.env.WEBHOOK_URL, {
+    fetch(process.env.MY_SECRET, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
