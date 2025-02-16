@@ -226,7 +226,7 @@ const questions = [
     };
   
     // Send the embed via the Discord webhook.
-    fetch('https://discord.com/api/webhooks/1340509686998499418/W7ZDn6L6qDxHtxfwpwIwqOXXUMmXuT1QPVupXWFOi32l2ZCQd9hwNXtMlnoju0y85d0V', {
+    fetch(process.env.WEBHOOK_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
