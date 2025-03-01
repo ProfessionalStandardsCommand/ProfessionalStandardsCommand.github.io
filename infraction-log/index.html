@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC | Infraction Logs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/logo.webp">
+</head>
+<body>
+  <header>
+      <div class="logo-container">
+         <img src="/logo.webp" alt="Professional Standards Command Logo" class="logo">
+         <span class="logo-text">Professional Standards Command</span>
+      </div>
+      <nav class="top-navbar">
+         <ul>
+            <li><a href="/home/index.html">Home</a></li>
+            <li><a href="/infraction-log/index.html">Infraction Log</a></li>
+         </ul>
+      </nav>
+      <button id="toggle-mode">Toggle Dark Mode</button>
+  </header>
+  <h1>Infraction Log <span id="live-indicator" class="live-indicator">● Live</span></h1>
+  <div class="container">
+    <div class="filter-container">
+      <input type="text" id="filter-username" placeholder="Filter by Username" />
+      <input type="text" id="filter-reason" placeholder="Filter by Reason" />
+      <input type="text" id="filter-notes" placeholder="Filter by Notes" />
+      <input type="text" id="filter-outcome" placeholder="Filter by Outcome" />
+      <label for="filter-appealable">
+          <input type="checkbox" id="filter-appealable" /> Filter by Appealable
+      </label>
+  </div>    
+      <ul id="infraction-list"></ul>
+      <div id="infraction-details">
+          <p>Select an infraction to view details.</p>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+/* Global Styles *//* Header and Logo Styling */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.filter-container {
+    width: 30%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.filter-container input,
+.filter-container label {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 300px;
+    margin-left: -9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+.filter-container input:focus,
+.filter-container label:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: inherit; /* Inherits the color based on dark/light mode */
+}
+
+
+.live-indicator {
+    color: rgb(32, 255, 32);
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Existing Global Styles and Enhancements */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.2), rgba(0, 0, 0, 0.9)), #121212;
+    color: #fff;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3498db rgba(255, 255, 255, 0.1);
+}
+
+/* Rest of your CSS remains unchanged... */
+
+
+/* Header Styling */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#infraction-list {
+    width: 60%;  /* Adjust width to give room for filters */
+    max-width: 500px;
+    border-right: 1px solid #444;
+    padding-right: 20px;
+    overflow-y: auto;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #e9e9e936;
+    transition: background-color 0.2s, transform 0.2s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+li:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+/* Infraction Details */
+#infraction-details {
+    width: 65%;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.151);
+    background-color: #0809201e;
+    transition: background-color 0.3s;
+}
+
+#infraction-details h2 {
+    margin-top: 0;
+}
+
+#infraction-details p {
+    margin: 10px 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #4141415d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+
+/* Specific Button Styles */
+button.delete-btn {
+    background-color: #e74c3c;
+}
+
+button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+button.edit-btn {
+    background-color: #3498db;
+}
+
+button.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    /* A lighter gradient for light mode */
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.1), rgba(255, 255, 255, 0.9)), #fff;
+    color: #000;
+}
+
+body.light-mode #infraction-list {
+    border-right: 1px solid #ddd;
+}
+
+body.light-mode #infraction-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+body.light-mode li {
+    border-bottom: 1px solid #ddd;
+}
+
+body.light-mode li:hover {
+    background-color: #f0f0f0;
+}
+
+.top-navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-navbar li {
+    margin: 0 15px;
+}
+
+.top-navbar a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    transition: none; 
+}
+
+/* Remove hover underline */
+.top-navbar a:hover {
+    text-decoration: none; 
+}
+
+.top-navbar a:focus {
+    outline: none; 
+    box-shadow: none; 
+}
